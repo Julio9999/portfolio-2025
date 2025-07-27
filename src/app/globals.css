@@ -13,3 +13,7 @@
   background-size: 200% 200%;
   animation: gradientShift 8s ease infinite;
 }
+
+.purple-background {
+  @apply bg-gradient-to-r from-[#1e1b4b] to-[#2e026d] text-white;
+}
