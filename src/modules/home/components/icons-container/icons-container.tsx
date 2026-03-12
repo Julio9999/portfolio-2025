@@ -1,56 +1,70 @@
 import {
+    RiAndroidFill,
+    RiAppleFill,
     RiNextjsFill,
     RiNodejsFill,
     RiReactjsFill,
     RiTailwindCssFill
 } from "react-icons/ri";
-import { SiNestjs, SiTypescript } from "react-icons/si";
+import { SiExpo, SiNestjs, SiTypescript } from "react-icons/si";
 import { IconContainer } from "@/components/icon-container";
 
 export const IconsContainer = () => {
+    const skills = [
+        {
+            id: "typescript",
+            icon: <SiTypescript size={40} className="text-[#3178c6]" />,
+            label: "TypeScript",
+        },
+        {
+            id: "react",
+            icon: <RiReactjsFill size={40} className="text-[#61dafb]" />,
+            label: "React",
+        },
+        {
+            id: "react-native",
+            icon: <div className="flex items-center gap-1"><RiReactjsFill size={32} className="text-[#61dafb]" /><RiAndroidFill size={18} className="text-[#85d26b]" /><RiAppleFill size={18} className="text-white" /></div>,
+            label: "React Native",
+        },
+        {
+            id: "expo",
+            icon: <SiExpo size={36} className="text-white" />,
+            label: "Expo",
+        },
+        {
+            id: "next",
+            icon: <RiNextjsFill size={38} className="text-white" />,
+            label: "Next.js",
+        },
+        {
+            id: "node",
+            icon: <RiNodejsFill size={38} className="text-[#7cc84a]" />,
+            label: "Node.js",
+        },
+        {
+            id: "tailwind",
+            icon: <RiTailwindCssFill size={38} className="text-[#38bdf8]" />,
+            label: "Tailwind",
+        },
+        {
+            id: "nestjs",
+            icon: <SiNestjs size={34} className="text-[#dc2626]" />,
+            label: "NestJS",
+        },
+    ];
+
     return (
-        <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 p-4">
-            <IconContainer className="group transition-shadow duration-300 hover:shadow-[0_0_30px_#3178c6] active:shadow-[0_0_30px_#3178c6]">
-                <SiTypescript
-                    size={64}
-                    className="text-white transition-colors duration-300 group-hover:text-[#3178c6] group-active:text-[#3178c6]"
-                />
-            </IconContainer>
-
-            <IconContainer className="group transition-shadow duration-300 hover:shadow-[0_0_30px_#22d3ee] active:shadow-[0_0_30px_#22d3ee]">
-                <RiReactjsFill
-                    size={64}
-                    className="text-white transform transition-all duration-1000 group-hover:text-[#22d3ee] group-hover:rotate-[360deg] group-active:text-[#22d3ee] group-active:rotate-[360deg]"
-                />
-            </IconContainer>
-
-            <IconContainer className="group transition-shadow duration-300 hover:shadow-[0_0_30px_#38bdf8] active:shadow-[0_0_30px_#38bdf8]">
-                <RiTailwindCssFill
-                    size={64}
-                    className="text-white transition-colors duration-300 group-hover:text-[#38bdf8] group-active:text-[#38bdf8]"
-                />
-            </IconContainer>
-
-            <IconContainer className="group transition-shadow duration-300 hover:shadow-[0_0_30px_#d4d4d4] active:shadow-[0_0_30px_#d4d4d4]">
-                <RiNextjsFill
-                    size={64}
-                    className="text-white transition-colors duration-300 group-hover:text-[#d4d4d4] group-active:text-[#d4d4d4]"
-                />
-            </IconContainer>
-
-            <IconContainer className="group transition-shadow duration-300 hover:shadow-[0_0_30px_#10b981] active:shadow-[0_0_30px_#10b981]">
-                <RiNodejsFill
-                    size={64}
-                    className="text-white transition-colors duration-300 group-hover:text-[#10b981] group-active:text-[#10b981]"
-                />
-            </IconContainer>
-
-            <IconContainer className="group transition-shadow duration-300 hover:shadow-[0_0_30px_#dc2626] active:shadow-[0_0_30px_#dc2626]">
-                <SiNestjs
-                    size={64}
-                    className="text-white transition-colors duration-300 group-hover:text-[#dc2626] group-active:text-[#dc2626]"
-                />
-            </IconContainer>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 md:gap-4">
+            {skills.map((skill, index) => (
+                <IconContainer
+                    key={skill.id}
+                    className="fade-up"
+                    style={{ animationDelay: `${index * 60}ms` }}
+                    label={skill.label}
+                >
+                    {skill.icon}
+                </IconContainer>
+            ))}
         </div>
     );
 };

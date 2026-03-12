@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { CommonProvider } from "../context/common-context";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const titleFont = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const monoFont = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Julio Espinola",
-  description: "Portfolio 2025",
+  title: "Julio Espinola | Portfolio 2026",
+  description: "Portfolio 2026: Frontend, React, Next.js y soluciones web modernas.",
 };
 
 export default function RootLayout({
@@ -24,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <CommonProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${titleFont.variable} ${monoFont.variable} antialiased ambient-grid`}
         >
           {children}
         </body>

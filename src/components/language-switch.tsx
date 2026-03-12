@@ -15,11 +15,11 @@ export const LanguageSwitch = () => {
     <div className="relative inline-block text-left z-20">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="inline-flex justify-center w-20 items-center rounded-md bg-white/5 hover:bg-white/10 px-4 py-2 text-sm font-medium  transition cursor-pointer"
+        className="inline-flex w-24 items-center justify-center rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm font-medium text-[var(--text)] transition hover:bg-white/20"
       >
         {language.toUpperCase()}
         <svg
-          className="ml-2 h-4 w-4 text-white"
+          className="ml-2 h-4 w-4 text-[var(--text)]"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -32,17 +32,17 @@ export const LanguageSwitch = () => {
       </button>
 
       {open && (
-        <div className="absolute md:right-0  z-20  w-28 origin-top-right rounded-md purple-background shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className="absolute z-20 mt-2 w-28 origin-top-right rounded-lg border border-white/20 bg-[#101b3a] shadow-lg backdrop-blur-xl md:right-0">
           <div className="py-1 text-sm">
             <button
               onClick={() => handleSelect("en")}
-              className={`block w-full text-left px-4 py-2 cursor-pointer hover:bg-white/10`}
+              className="block w-full cursor-pointer px-4 py-2 text-left text-[var(--text)] hover:bg-white/10"
             >
               English
             </button>
             <button
               onClick={() => handleSelect("es")}
-              className={`block w-full text-left px-4 py-2 cursor-pointer hover:bg-white/10`}
+              className="block w-full cursor-pointer px-4 py-2 text-left text-[var(--text)] hover:bg-white/10"
             >
               Español
             </button>

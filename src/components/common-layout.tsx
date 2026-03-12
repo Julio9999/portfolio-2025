@@ -1,18 +1,10 @@
 "use client"
-import { Poppins } from "next/font/google";
 import { Navbar } from "./navbar";
 import { useEffect, useState } from "react";
 
 interface Props {
     children: React.ReactNode;
 }
-
-
-const poppins = Poppins({
-    weight: ["400", "700"],
-    subsets: ["latin"],
-    variable: "--font-poppins",
-});
 
 export const CommonLayout = ({ children }: Props) => {
 
@@ -28,11 +20,11 @@ export const CommonLayout = ({ children }: Props) => {
     }
 
     return (
-        <div className={`flex flex-col min-h-screen purple-background ${poppins.className}`}>
+        <div className="flex flex-col min-h-screen" style={{ fontFamily: "var(--font-space-grotesk)" }}>
             <Navbar />
-            <div className={` text-white p-6 md:p-16`}>
+            <main className="w-full px-5 py-8 md:px-12 md:py-12 lg:px-20 lg:py-16 fade-up">
                 {children}
-            </div>
+            </main>
         </div>
     )
 }

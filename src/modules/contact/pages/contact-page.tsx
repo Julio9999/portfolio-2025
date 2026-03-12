@@ -8,15 +8,15 @@ export const ContactPage = () => {
   const t = translations[language];
 
   return (
-    <section className="flex items-center justify-center">
-      <div className="max-w-md w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-8 text-center space-y-6">
-        <h1 className="text-4xl md:text-5xl font-bold">{t.contactTitle}</h1>
-        <p className="text-sm md:text-base text-white/80">{t.contactDescription}</p>
-        <div className="flex items-center justify-center space-x-2">
-          <MdEmail className="text-2xl md:text-3xl text-purple-400" />
+    <section className="mx-auto w-full max-w-[820px]">
+      <div className="glass-card rounded-3xl p-7 text-center md:p-10">
+        <h1 className="section-title text-4xl font-bold md:text-5xl">{t.contactTitle}</h1>
+        <p className="muted mx-auto mt-4 max-w-xl text-sm md:text-base">{t.contactDescription}</p>
+        <div className="mt-7 inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2">
+          <MdEmail className="text-2xl md:text-3xl text-[var(--brand)]" />
           <a
             href="mailto:julioespinola9999@gmail.com"
-            className="text-purple-300 hover:underline break-all"
+            className="break-all text-[var(--text)] hover:text-[var(--brand)]"
           >
             julioespinola9999@gmail.com
           </a>

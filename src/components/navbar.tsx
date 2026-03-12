@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { LanguageSwitch } from './language-switch';
 import { useCommonContext } from '@/context/common-context';
 import { translations } from '@/i18n/i18n';
@@ -10,20 +10,26 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { language } = useCommonContext();
-  const t = translations[language]
+  const t = translations[language];
 
-  
+  const links = [
+    { href: '/', label: t.home },
+    { href: '/about-me', label: t.aboutMe },
+    { href: '/contact', label: t.contact },
+  ];
+
   return (
-    <nav className="w-full bg-white/10 backdrop-blur-md border-b border-white/5 text-white py-4 z-20">
-      <div className="max-w-[1000px] mx-auto px-4 md:px-8 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-xl font-bold text-purple-400">
-          <Link href="/">Julio.dev</Link>
+    <header className="sticky top-0 z-30">
+      <nav className="mx-auto mt-4 flex w-[min(1100px,92%)] items-center justify-between rounded-2xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur-xl md:px-6">
+        <div className="text-xl font-semibold tracking-tight text-[var(--text)]">
+          <Link href="/" className="inline-flex items-center gap-2">
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-[var(--brand)]" />
+            Julio.dev
+          </Link>
         </div>
 
-        {/* Hamburger button */}
         <button
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-[var(--text)]"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -36,41 +42,26 @@ export const Navbar = () => {
           </svg>
         </button>
 
-        {/* Links */}
         <div
-          className={`flex-col bg-gradient-to-r from-[#1e1b4b] to-[#2e026d] md:bg-none md:flex-row md:flex md:items-center w-full md:w-auto absolute md:static top-full left-0 md:top-auto md:left-auto rounded-b-lg md:rounded-none transition-all duration-300 md:space-x-4 p-4 md:p-0 ${isOpen ? 'flex' : 'hidden'
-            }`}
+          className={`absolute left-0 top-[110%] w-full flex-col rounded-2xl border border-white/20 bg-[#0f1a39]/95 p-4 backdrop-blur-xl md:static md:top-auto md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 px-4 bg-red ${isOpen ? 'flex' : 'hidden'
+            }`} 
         >
-          <Link href="/">
-            <span
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block py-2 md:py-0 cursor-pointer hover:text-purple-400 transition-colors duration-200"
+              className="p-2 text-[15px] text-[var(--muted)] transition hover:text-[var(--text)]"
             >
-              {t.home}
-            </span>
-          </Link>
-          <Link href="/about-me">
-            <span
-              onClick={() => setIsOpen(false)}
-              className="block py-2 md:py-0 cursor-pointer hover:text-purple-400 transition-colors duration-200"
-            >
-              {t.aboutMe}
-            </span>
-          </Link>
-          <Link href="/contact">
-            <span
-              onClick={() => setIsOpen(false)}
-              className="block py-2 md:py-0 cursor-pointer hover:text-purple-400 transition-colors duration-200"
-            >
-              {t.contact}
-            </span>
-          </Link>
+              {link.label}
+            </Link>
+          ))}
 
-          <div className="pt-2 md:pt-0">
+          <div className="pt-2 md:pt-0 md:pl-2">
             <LanguageSwitch />
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };

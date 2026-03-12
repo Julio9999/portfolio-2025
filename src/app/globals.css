@@ -1,19 +1,74 @@
 @import "tailwindcss";
 
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
+:root {
+  --bg: #0a1228;
+  --bg-soft: #111d3f;
+  --surface: rgba(255, 255, 255, 0.07);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.2);
+  --text: #f4f7ff;
+  --muted: #c4d0ed;
+  --brand: #41d9b2;
+  --brand-2: #ff8a4c;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(800px 500px at 0% -10%, rgba(65, 217, 178, 0.24), transparent 55%),
+    radial-gradient(650px 420px at 100% 0%, rgba(255, 138, 76, 0.2), transparent 60%),
+    linear-gradient(160deg, var(--bg), var(--bg-soft));
+}
+
+.ambient-grid {
+  position: relative;
+  isolation: isolate;
+}
+
+.ambient-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at 50% 10%, black 30%, transparent 85%);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(14px);
+    opacity: 0;
   }
-  50% {
-    background-position: 100% 50%;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-.animate-gradientShift {
-  background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite;
+.fade-up {
+  animation: floatUp 650ms ease-out both;
 }
 
-.purple-background {
-  @apply bg-gradient-to-r from-[#1e1b4b] to-[#2e026d] text-white;
+.glass-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, var(--surface-strong), var(--surface));
+  backdrop-filter: blur(14px);
+}
+
+.section-title {
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+.muted {
+  color: var(--muted);
 }

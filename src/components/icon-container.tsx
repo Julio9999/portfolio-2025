@@ -3,12 +3,18 @@ import React from 'react'
 interface Props {
     children: React.ReactNode;
     className?: string;
+    style?: React.CSSProperties;
+    label?: string;
 }
 
-export const IconContainer = ({children, className}: Props) => {
+export const IconContainer = ({ children, className, style, label }: Props) => {
     return (
-        <div className={`p-4 rounded-xl backdrop-blur-md bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer ${className}`}>
-            {children}
+        <div
+            className={`group rounded-2xl border border-white/20 bg-white/5 p-4 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 ${className}`}
+            style={style}
+        >
+            <div className="mb-3 flex min-h-[44px] items-center justify-center">{children}</div>
+            <p className="text-center text-sm font-medium text-[var(--muted)] group-hover:text-[var(--text)]">{label}</p>
         </div>
     )
 }
