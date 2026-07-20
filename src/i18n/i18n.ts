@@ -9,7 +9,7 @@ export const translations = {
     aboutMeTitle: "Sobre mí",
     aboutMeDescription:
       "Soy desarrollador frontend enfocado en experiencias modernas, accesibles y de alto rendimiento. En 2026 trabajo con React, Next.js, TypeScript, React Native y Expo para construir productos web y mobile con diseño consistente.",
-    homeTagline: "Frontend Developer",
+    homeTagline: "Fullstack Developer",
     homeFocus: "Construyo experiencias web y mobile con React, Next.js, React Native y Expo.",
     stackTitle: "Stack principal 2026",
   },
@@ -22,7 +22,7 @@ export const translations = {
     aboutMeTitle: "About me",
     aboutMeDescription:
       "I am a frontend developer focused on modern, accessible, and high-performance experiences. In 2026 I build with React, Next.js, TypeScript, React Native, and Expo to deliver cohesive web and mobile products.",
-    homeTagline: "Frontend Developer",
+    homeTagline: "Fullstack Developer",
     homeFocus: "I build web and mobile experiences with React, Next.js, React Native, and Expo.",
     stackTitle: "Core Stack 2026",
   },
