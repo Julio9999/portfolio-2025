@@ -10,8 +10,6 @@ export interface Skill {
   descriptionKey: string;
   /** react-icons component (Simple Icons or Tabler set) */
   icon: React.ComponentType<{ className?: string }>;
-  /** Proficiency 1–5 */
-  level: 1 | 2 | 3 | 4 | 5;
 }
 
 export const skills: Skill[] = [
@@ -20,34 +18,29 @@ export const skills: Skill[] = [
     nameKey: "skillsCardOpencodeName",
     descriptionKey: "skillsCardOpencodeDesc",
     icon: SiOpenai,
-    level: 5,
   },
   {
     id: "ai-agent-management",
     nameKey: "skillsCardAiAgentName",
     descriptionKey: "skillsCardAiAgentDesc",
     icon: SiLangchain,
-    level: 4,
   },
   {
     id: "rag",
     nameKey: "skillsCardRagName",
     descriptionKey: "skillsCardRagDesc",
     icon: SiOpensearch,
-    level: 4,
   },
   {
     id: "sdd",
     nameKey: "skillsCardSddName",
     descriptionKey: "skillsCardSddDesc",
     icon: SiReadthedocs,
-    level: 5,
   },
   {
     id: "clean-architecture",
     nameKey: "skillsCardCleanArchName",
     descriptionKey: "skillsCardCleanArchDesc",
     icon: TbComponents,
-    level: 5,
   },
 ];

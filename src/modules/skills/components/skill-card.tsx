@@ -17,17 +17,6 @@ export const SkillCard = ({
         <p className="text-sm leading-relaxed text-[var(--muted)]">
           {t[skill.descriptionKey]}
         </p>
-
-        <div className="flex gap-1.5">
-          {Array.from({ length: 5 }, (_, i) => (
-            <span
-              key={i}
-              className={`h-2 w-2 rounded-full ${
-                i < skill.level ? "bg-[var(--brand)]" : "bg-white/20"
-              }`}
-            />
-          ))}
-        </div>
       </div>
     </div>
   );
