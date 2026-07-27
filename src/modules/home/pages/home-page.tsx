@@ -19,10 +19,10 @@ export const HomePage = () => {
                     <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
                         Portfolio 2026
                     </p>
-                    <h1 className="section-title text-4xl font-bold leading-tight md:text-6xl">
+                    <h1 className="section-title text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
                         Julio Espinola
                     </h1>
-                    <p className="text-xl font-semibold text-[var(--brand)] md:text-3xl">
+                    <p className="text-lg font-semibold text-[var(--brand)] sm:text-xl md:text-3xl">
                         {t.homeTagline}
                     </p>
                     <p className="max-w-2xl text-base text-[var(--muted)] md:text-lg">
