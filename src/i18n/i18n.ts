@@ -13,11 +13,23 @@ export const translations = {
     homeFocus: "Construyo experiencias web y mobile con React, Next.js, React Native y Expo.",
     stackTitle: "Stack principal 2026",
     skillsTitle: "Skills",
+    skillsSubtitle:
+      "Habilidades metodológicas y conceptuales que diferencian mi enfoque de desarrollo.",
     skillsCardOpencodeName: "OpenCode",
+    skillsCardOpencodeDesc:
+      "Agente de IA para codificación asistida. Edita, refactoriza y gestiona tu código mediante comandos en lenguaje natural.",
     skillsCardAiAgentName: "Gestión de Agentes IA",
-    skillsCardRagName: "RAG",
-    skillsCardSddName: "SDD",
+    skillsCardAiAgentDesc:
+      "Orquestación de agentes autónomos con LLMs: uso de herramientas, memoria, planificación y ejecución multi-paso.",
+    skillsCardRagName: "RAG (Generación Aumentada por Recuperación)",
+    skillsCardRagDesc:
+      "Búsqueda semántica integrada con LLMs para respuestas fundamentadas en fuentes verificables.",
+    skillsCardSddName: "SDD (Desarrollo Guiado por Especificaciones)",
+    skillsCardSddDesc:
+      "Metodología que escribe especificaciones antes que código. Reduce iteraciones y deuda técnica.",
     skillsCardCleanArchName: "Arquitectura Limpia",
+    skillsCardCleanArchDesc:
+      "Separación en capas con reglas de dependencia estrictas. Inversión de control y diseño guiado por el dominio.",
   },
   en: {
     home: "Home",
@@ -32,10 +44,22 @@ export const translations = {
     homeFocus: "I build web and mobile experiences with React, Next.js, React Native, and Expo.",
     stackTitle: "Core Stack 2026",
     skillsTitle: "Skills",
+    skillsSubtitle:
+      "Methodological and conceptual skills that set my development approach apart.",
     skillsCardOpencodeName: "OpenCode",
+    skillsCardOpencodeDesc:
+      "Command-line AI agent for assisted coding. Edit, refactor, and manage your code via natural language.",
     skillsCardAiAgentName: "AI Agent Management",
-    skillsCardRagName: "RAG",
-    skillsCardSddName: "SDD",
+    skillsCardAiAgentDesc:
+      "Orchestration of autonomous LLM agents: tool-use, memory, planning, and multi-step execution.",
+    skillsCardRagName: "RAG (Retrieval-Augmented Generation)",
+    skillsCardRagDesc:
+      "Semantic search integrated with LLMs for grounded, source-backed responses.",
+    skillsCardSddName: "SDD (Spec-Driven Development)",
+    skillsCardSddDesc:
+      "A spec-first methodology: requirements, design, and tasks before implementation.",
     skillsCardCleanArchName: "Clean Architecture",
+    skillsCardCleanArchDesc:
+      "Layered separation with strict dependency rules. Inversion of control and domain-driven design.",
   },
 };
