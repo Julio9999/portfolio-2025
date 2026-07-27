@@ -12,7 +12,6 @@ export const translations = {
     homeTagline: "Fullstack Developer",
     homeFocus: "Construyo experiencias web y mobile con React, Next.js, React Native y Expo.",
     stackTitle: "Stack principal 2026",
-    skills: "Habilidades",
     skillsTitle: "Skills Showcase",
     skillsSubtitle:
       "Habilidades metodológicas y conceptuales que diferencian mi enfoque de desarrollo.",
@@ -44,7 +43,6 @@ export const translations = {
     homeTagline: "Fullstack Developer",
     homeFocus: "I build web and mobile experiences with React, Next.js, React Native, and Expo.",
     stackTitle: "Core Stack 2026",
-    skills: "Skills",
     skillsTitle: "Skills Showcase",
     skillsSubtitle:
       "Methodological and conceptual skills that set my development approach apart.",
