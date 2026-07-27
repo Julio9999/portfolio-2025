@@ -14,8 +14,8 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Julio Espinola | Portfolio 2026",
-  description: "Portfolio 2026: Frontend, React, Next.js y soluciones web modernas.",
+  title: "Julio Espinola",
+  description: "Frontend, React, Next.js y soluciones web modernas.",
 };
 
 export default function RootLayout({
