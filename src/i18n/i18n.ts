@@ -19,23 +19,18 @@ export const translations = {
     skillsCardOpencodeName: "OpenCode",
     skillsCardOpencodeDesc:
       "Agente de IA para codificación asistida. Edita, refactoriza y gestiona tu código mediante comandos en lenguaje natural.",
-    skillsCardOpencodeLabel: "Ver en GitHub",
     skillsCardAiAgentName: "Gestión de Agentes IA",
     skillsCardAiAgentDesc:
       "Orquestación de agentes autónomos con LLMs: uso de herramientas, memoria, planificación y ejecución multi-paso.",
-    skillsCardAiAgentLabel: "Documentación",
     skillsCardRagName: "RAG (Generación Aumentada por Recuperación)",
     skillsCardRagDesc:
       "Búsqueda semántica integrada con LLMs para respuestas fundamentadas en fuentes verificables.",
-    skillsCardRagLabel: "Artículo introductorio",
     skillsCardSddName: "SDD (Desarrollo Guiado por Especificaciones)",
     skillsCardSddDesc:
       "Metodología que escribe especificaciones antes que código. Reduce iteraciones y deuda técnica.",
-    skillsCardSddLabel: "Comunidad",
     skillsCardCleanArchName: "Arquitectura Limpia",
     skillsCardCleanArchDesc:
       "Separación en capas con reglas de dependencia estrictas. Inversión de control y diseño guiado por el dominio.",
-    skillsCardCleanArchLabel: "Artículo original",
   },
   en: {
     home: "Home",
@@ -56,22 +51,17 @@ export const translations = {
     skillsCardOpencodeName: "OpenCode",
     skillsCardOpencodeDesc:
       "Command-line AI agent for assisted coding. Edit, refactor, and manage your code via natural language.",
-    skillsCardOpencodeLabel: "View on GitHub",
     skillsCardAiAgentName: "AI Agent Management",
     skillsCardAiAgentDesc:
       "Orchestration of autonomous LLM agents: tool-use, memory, planning, and multi-step execution.",
-    skillsCardAiAgentLabel: "Documentation",
     skillsCardRagName: "RAG (Retrieval-Augmented Generation)",
     skillsCardRagDesc:
       "Semantic search integrated with LLMs for grounded, source-backed responses.",
-    skillsCardRagLabel: "Overview article",
     skillsCardSddName: "SDD (Spec-Driven Development)",
     skillsCardSddDesc:
       "A spec-first methodology: requirements, design, and tasks before implementation.",
-    skillsCardSddLabel: "Community",
     skillsCardCleanArchName: "Clean Architecture",
     skillsCardCleanArchDesc:
       "Layered separation with strict dependency rules. Inversion of control and domain-driven design.",
-    skillsCardCleanArchLabel: "Original article",
   },
 };

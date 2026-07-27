@@ -28,17 +28,6 @@ export const SkillCard = ({
             />
           ))}
         </div>
-
-        {skill.externalUrl && (
-          <a
-            href={skill.externalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-[var(--muted)] transition-colors hover:text-[var(--brand)]"
-          >
-            {t[skill.externalLabelKey]} ↗
-          </a>
-        )}
       </div>
     </div>
   );
