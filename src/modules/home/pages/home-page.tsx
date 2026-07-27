@@ -1,6 +1,8 @@
 "use client";
 
 import { IconsContainer } from "../components/icons-container/icons-container";
+import { SkillsGrid } from "@/modules/skills/components/skills-grid";
+import { skills } from "@/modules/skills/data/skills";
 import { useCommonContext } from "@/context/common-context";
 import { translations } from "@/i18n/i18n";
 
@@ -32,6 +34,16 @@ export const HomePage = () => {
             <div className="glass-card rounded-3xl px-6 py-8 md:px-10 md:py-10">
                 <h2 className="mb-4 text-2xl font-semibold md:text-3xl">{t.stackTitle}</h2>
                 <IconsContainer />
+            </div>
+
+            <div className="glass-card rounded-3xl px-6 py-8 md:px-10 md:py-10">
+                <div className="mb-4 space-y-1">
+                    <h2 className="text-2xl font-semibold md:text-3xl">{t.skillsTitle}</h2>
+                    {t.skillsSubtitle && (
+                        <p className="text-sm text-[var(--muted)] md:text-base">{t.skillsSubtitle}</p>
+                    )}
+                </div>
+                <SkillsGrid skills={skills} t={t} />
             </div>
         </section>
     );
