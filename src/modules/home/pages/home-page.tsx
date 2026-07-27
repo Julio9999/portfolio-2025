@@ -16,9 +16,6 @@ export const HomePage = () => {
         <section className="mx-auto flex w-full max-w-[1100px] flex-col gap-8">
             <div className="glass-card rounded-3xl px-6 py-10 md:px-10 md:py-14">
                 <div className="max-w-3xl space-y-5">
-                    <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
-                        Portfolio 2026
-                    </p>
                     <h1 className="section-title text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
                         Julio Espinola
                     </h1>
