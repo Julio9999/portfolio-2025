@@ -6,7 +6,7 @@ import {
     RiReactjsFill,
     RiTailwindCssFill
 } from "react-icons/ri";
-import { SiExpo, SiNestjs, SiTypescript } from "react-icons/si";
+import { SiDocker, SiExpo, SiKubernetes, SiNestjs, SiTypescript } from "react-icons/si";
 import { IconContainer } from "@/components/icon-container";
 
 export const IconsContainer = () => {
@@ -50,6 +50,16 @@ export const IconsContainer = () => {
             id: "nestjs",
             icon: <SiNestjs size={34} className="text-[#dc2626]" />,
             label: "NestJS",
+        },
+        {
+            id: "docker",
+            icon: <SiDocker size={38} className="text-[#2496ed]" />,
+            label: "Docker",
+        },
+        {
+            id: "kubernetes",
+            icon: <SiKubernetes size={38} className="text-[#326ce5]" />,
+            label: "Kubernetes",
         },
     ];
 
