@@ -1,5 +1,5 @@
 import type { Skill } from "../data/skills";
-import { SkillCard } from "./skill-card";
+import { IconContainer } from "@/components/icon-container";
 
 export const SkillsGrid = ({
   skills,
@@ -9,9 +9,16 @@ export const SkillsGrid = ({
   t: Record<string, string>;
 }) => {
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-      {skills.map((skill) => (
-        <SkillCard key={skill.id} skill={skill} t={t} />
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 md:gap-4">
+      {skills.map((skill, index) => (
+        <IconContainer
+          key={skill.id}
+          className="fade-up"
+          style={{ animationDelay: `${index * 60}ms` }}
+          label={t[skill.nameKey]}
+        >
+          <skill.icon className="h-10 w-10 text-[var(--brand)]" />
+        </IconContainer>
       ))}
     </div>
   );
